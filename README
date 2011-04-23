@@ -1,0 +1,44 @@
+FrpsMassiveVideoConverter README file
+
+Autor: Joe Cabezas <joe.cabezas@gmail.com>
+===============================================================================
+
+Descripción
+
+	FprsMassiveVideoConverter (fmvc desde ahora :D), es un batch file que transforma todos
+	los videos de una carpeta al formato MP4 con el codec de video H.264 y codec de audio AAC
+
+	Luego de convertir lso videos, además crea 2 directorios: "out" y "raw":
+
+	out/: En esta carpeta quedan los videos comprimidos
+	raw/: En esta carpeta quedan los originales (listos para ser borrados si pesan mucho)
+
+Como usar
+
+	mueve el archivo al cualquier sitio y luego por consola:
+
+	$ sh fmvc.sh <ruta_a_carpeta>
+
+	el programa automáticamente tomará todos los videos que estén dentro (no recursivo) y los
+	empezará a convertir, luego, los convertidos quedaran en:
+
+	<ruta_a_carpeta>/out
+
+	y los originales los moverá a:
+
+	<ruta_a_carpeta>/raw
+
+	finalmente dentro de <ruta_a_carpeta> no debieran quedar videos, listo para agregar mas videos
+
+Requisitos
+
+	Se necesita tener compilado el programa: ffmpeg
+	con los codec x264 y libfacc
+	
+	instrucciones de como hacerlo para Ubuntu acá:
+	http://ubuntuforums.org/showthread.php?t=786095
+
+Changelog
+
+	Version 1 beta
+		Primera version funcional
